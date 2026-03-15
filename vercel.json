@@ -41,6 +41,8 @@
     { "source": "/profile/(.*)", "destination": "https://megamind-profile.vercel.app/$1" },
 
     { "source": "/", "destination": "https://megamind-blogs.vercel.app/" },
-    { "source": "/(.*)", "destination": "https://megamind-blogs.vercel.app/$1" }
-  ]
+    { "source": "/(.*)", "destination": "https://megamind-blogs.vercel.app/$1" },
+    { "source": "/(.*)", "destination": "/404.html" }
+  ],
+  "cleanUrls": true
 }
