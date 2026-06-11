@@ -3,6 +3,8 @@ import { createRoot, type Root } from 'react-dom/client'
 import Navbar from './components/Navbar';
 import './index.css'
 
+const ASSET_BASE = new URL('./', import.meta.url).href;
+
 class WebNavbar extends HTMLElement {
   private root: Root | null = null;
 
@@ -11,7 +13,7 @@ class WebNavbar extends HTMLElement {
       this.root = createRoot(this);
       this.root.render(
         <StrictMode>
-          <Navbar />
+          <Navbar assetBase={ASSET_BASE} />
         </StrictMode>
       );
     }

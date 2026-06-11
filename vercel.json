@@ -29,44 +29,31 @@
     }
   ],
   "redirects": [
-    { "source": "/", "destination": "/blogs/", "permanent": false },
     { "source": "/blogs", "destination": "/blogs/", "permanent": true },
     { "source": "/tutorials", "destination": "/tutorials/", "permanent": true },
     { "source": "/profile", "destination": "/profile/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/nav/(.*)", "destination": "/$1" },
-
+    { "source": "/nav/:path*", "destination": "/:path*" },
     {
-      "source": "/blogs/",
-      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs/"
+      "source": "/blogs/:path*",
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs/:path*"
     },
     {
-      "source": "/blogs/(.*)",
-      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs/$1"
-    },
-
-    {
-      "source": "/tutorials/",
-      "destination": "https://megamind-tutorials-six.vercel.app/tutorials/"
+      "source": "/tutorials/:path*",
+      "destination": "https://megamind-tutorials-six.vercel.app/tutorials/:path*"
     },
     {
-      "source": "/tutorials/(.*)",
-      "destination": "https://megamind-tutorials-six.vercel.app/tutorials/$1"
-    },
-
-    {
-      "source": "/profile/",
-      "destination": "https://megamind-profile-eta.vercel.app/profile/"
+      "source": "/profile/:path*",
+      "destination": "https://megamind-profile-eta.vercel.app/profile/:path*"
     },
     {
-      "source": "/profile/(.*)",
-      "destination": "https://megamind-profile-eta.vercel.app/profile/$1"
+      "source": "/",
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs"
     },
-
     {
-      "source": "/(.*)",
-      "destination": "https://megamind-tutorials-six.vercel.app/$1"
+      "source": "/:path*",
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/:path*"
     }
   ],
   "cleanUrls": true

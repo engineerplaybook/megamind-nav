@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  assetBase?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ assetBase = '/' }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const pathname = typeof window === 'undefined' ? '/' : window.location.pathname;
   const isBlogsActive = pathname === '/' || pathname.startsWith('/blogs');
@@ -17,7 +21,7 @@ const Navbar: React.FC = () => {
     <nav data-topnav className="navbar">
       <div className="container">
         <a href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}>
-          <img src="/logo.svg" alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
+          <img src={`${assetBase}logo.svg`} alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
           Engineer Playbook
         </a>
 
