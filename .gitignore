@@ -78,6 +78,12 @@ web_modules/
 .next
 out
 
+# TypeScript cache
+next-env.d.ts
+
+# Build artifacts (copied by vite build before next build)
+public/common-nav.*
+
 # Nuxt.js build / generate output
 .nuxt
 dist

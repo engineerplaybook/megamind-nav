@@ -4,10 +4,12 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const pathname = typeof window === 'undefined' ? '/' : window.location.pathname;
   const isBlogsActive = pathname === '/' || pathname.startsWith('/blogs');
+  const isTutorialsActive = pathname.startsWith('/tutorials');
   const isTeamActive = pathname.startsWith('/profile');
 
   const navLinks = [
     { href: '/blogs', label: 'Blogs', isActive: isBlogsActive },
+    { href: '/tutorials', label: 'Tutorials', isActive: isTutorialsActive },
     { href: '/profile', label: 'Team', isActive: isTeamActive },
   ];
 
