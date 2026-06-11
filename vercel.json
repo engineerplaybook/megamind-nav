@@ -7,7 +7,11 @@
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
+
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
       ]
     },
     {
@@ -31,18 +35,42 @@
   ],
   "rewrites": [
     { "source": "/nav/(.*)", "destination": "/$1" },
-    
-    { "source": "/blogs", "destination": "https://megamind-blogs.vercel.app/blogs" },
-    { "source": "/blogs/(.*)", "destination": "https://megamind-blogs.vercel.app/blogs/$1" },
 
-    { "source": "/tutorials/", "destination": "https://megamind-tutorials.vercel.app/" },
-    { "source": "/tutorials/(.*)", "destination": "https://megamind-tutorials.vercel.app/$1" },
+    {
+      "source": "/blogs",
+      "destination": "https://megamind-tutorials-six.vercel.app/blogs"
+    },
+    {
+      "source": "/blogs/(.*)",
+      "destination": "https://megamind-tutorials-six.vercel.app/blogs/$1"
+    },
 
-    { "source": "/profile/", "destination": "https://megamind-profile.vercel.app/" },
-    { "source": "/profile/(.*)", "destination": "https://megamind-profile.vercel.app/$1" },
+    {
+      "source": "/tutorials/",
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/"
+    },
+    {
+      "source": "/tutorials/(.*)",
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/$1"
+    },
 
-    { "source": "/", "destination": "https://megamind-blogs.vercel.app/" },
-    { "source": "/(.*)", "destination": "https://megamind-blogs.vercel.app/$1" },
+    {
+      "source": "/profile/",
+      "destination": "https://megamind-profile-eta.vercel.app/"
+    },
+    {
+      "source": "/profile/(.*)",
+      "destination": "https://megamind-profile-eta.vercel.app/$1"
+    },
+
+    {
+      "source": "/",
+      "destination": "https://megamind-tutorials-six.vercel.app/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://megamind-tutorials-six.vercel.app/$1"
+    },
     { "source": "/(.*)", "destination": "/404.html" }
   ],
   "cleanUrls": true

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"vite build --watch\" \"next dev\"",
-    "build": "vite build && cp dist/common-nav.js dist/common-nav.css public/ 2>/dev/null; next build",
+    "build": "vite build && next build",
     "start": "next start",
     "lint": "eslint ."
   },
