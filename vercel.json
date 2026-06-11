@@ -47,25 +47,25 @@
 
     {
       "source": "/tutorials/",
-      "destination": "https://megamind-tutorials-vxcg.vercel.app/"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/tutorials/"
     },
     {
       "source": "/tutorials/(.*)",
-      "destination": "https://megamind-tutorials-vxcg.vercel.app/$1"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/tutorials/$1"
     },
 
     {
       "source": "/profile/",
-      "destination": "https://megamind-profile-eta.vercel.app/"
+      "destination": "https://megamind-profile-eta.vercel.app/profile/"
     },
     {
       "source": "/profile/(.*)",
-      "destination": "https://megamind-profile-eta.vercel.app/$1"
+      "destination": "https://megamind-profile-eta.vercel.app/profile/$1"
     },
 
     {
       "source": "/",
-      "destination": "https://megamind-tutorials-six.vercel.app/"
+      "destination": "https://megamind-tutorials-six.vercel.app/blogs"
     },
     {
       "source": "/(.*)",
