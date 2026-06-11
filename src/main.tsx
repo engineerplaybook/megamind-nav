@@ -8,7 +8,6 @@ class WebNavbar extends HTMLElement {
 
   connectedCallback() {
     if (!this.root) {
-      // Render directly into the custom element (Light DOM)
       this.root = createRoot(this);
       this.root.render(
         <StrictMode>
@@ -26,20 +25,6 @@ class WebNavbar extends HTMLElement {
   }
 }
 
-// Register as Web Component
 if (!customElements.get('engineering-playbook-nav')) {
   customElements.define('engineering-playbook-nav', WebNavbar);
-}
-
-// Dev mode fallback is not really needed as we can just load the module, 
-// but if we want standalone dev mode for common-nav:
-if (import.meta.env.DEV) {
-  const root = document.getElementById('root');
-  if (root) {
-    createRoot(root).render(
-      <StrictMode>
-        <Navbar />
-      </StrictMode>,
-    )
-  }
 }
