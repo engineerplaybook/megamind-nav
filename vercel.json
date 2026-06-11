@@ -38,11 +38,11 @@
 
     {
       "source": "/blogs",
-      "destination": "megamind-tutorials-six.vercel.app/blogs"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs/"
     },
     {
       "source": "/blogs/(.*)",
-      "destination": "megamind-tutorials-six.vercel.app/blogs/$1"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs//$1"
     },
 
     {
@@ -65,11 +65,11 @@
 
     {
       "source": "/",
-      "destination": "megamind-tutorials-six.vercel.app/blogs"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/blogs"
     },
     {
       "source": "/(.*)",
-      "destination": "megamind-tutorials-six.vercel.app/$1"
+      "destination": "https://megamind-tutorials-vxcg.vercel.app/$1"
     },
     { "source": "/(.*)", "destination": "/404.html" }
   ],
