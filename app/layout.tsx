@@ -1,13 +1,10 @@
-import type { Metadata } from 'next';
 import Script from 'next/script';
+import { metadata } from './metadata';
 import '@engineerplaybook/design-system/dist/style.css';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Engineer Playbook | Navigation',
-  description: 'Shared navigation component',
-  icons: { icon: '/logo.svg' },
-};
+// eslint-disable-next-line react-refresh/only-export-components -- Next.js requires metadata export alongside default component
+export { metadata };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
