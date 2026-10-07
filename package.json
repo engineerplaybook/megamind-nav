@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently \"vite build --watch\" \"next dev\"",
     "build": "vite build && next build",
+    "build:vercel": "npm install --legacy-peer-deps && vite build && next build",
     "start": "next start",
     "lint": "eslint ."
   },
