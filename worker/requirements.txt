@@ -1,0 +1,2 @@
+# Crawl4AI is used only by the ingestion worker; Next.js never imports it.
+crawl4ai>=0.9,<0.10
