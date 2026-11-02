@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   turbopack: { root: path.resolve('../..') },
+  serverExternalPackages: ['@huggingface/transformers', 'onnxruntime-node'],
 };
 
 export default nextConfig;

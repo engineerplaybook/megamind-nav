@@ -8,17 +8,23 @@
     "build": "vite build && next build",
     "build:vercel": "npm install --legacy-peer-deps && vite build && next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "rag:model:download": "worker/.venv/bin/hf download onnx-community/all-MiniLM-L6-v2-ONNX --local-dir .cache/transformers/onnx-community/all-MiniLM-L6-v2-ONNX",
+    "rag:ingest": "tsx src/lib/rag/ingest.ts"
   },
   "dependencies": {
     "@engineerplaybook/design-system": "^0.1.0",
+    "@huggingface/transformers": "^4.3.2",
+    "dotenv": "^18.0.9",
     "next": "16.1.4",
+    "pg": "^8.23.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.55.0",
@@ -31,6 +37,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "tsx": "^4.23.15",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
